@@ -1,4 +1,5 @@
-﻿using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Exceptions;
+﻿using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Enums;
+using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Exceptions;
 using DanaTadbir.I4Twins.SensorData.Shared.Domain;
 
 namespace DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Entities;
@@ -6,14 +7,14 @@ namespace DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Entities;
 public sealed class SensorReading : AggregateRootBase<Guid>
 {
     public string DeviceId { get; private set; }
-    public string Metric { get; private set; }
+    public MetricType Metric { get; private set; }
     public DateTimeOffset Timestamp { get; private set; }
     public double Value { get; private set; }
     public long Sequence { get; private set; }
 
     private SensorReading(
         string deviceId,
-        string metric,
+        MetricType metric,
         DateTimeOffset timestamp,
         double value,
         long sequence)
@@ -29,7 +30,7 @@ public sealed class SensorReading : AggregateRootBase<Guid>
 
     public static SensorReading Create(
         string deviceId,
-        string metric,
+        MetricType metric,
         DateTimeOffset timestamp,
         double value,
         long sequence)
