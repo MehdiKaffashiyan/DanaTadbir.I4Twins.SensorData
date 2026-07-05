@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\DanaTadbir.I4Twins.SensorData.Shared\DanaTadbir.I4Twins.SensorData.Shared.csproj" />
-  </ItemGroup>
-
 </Project>
