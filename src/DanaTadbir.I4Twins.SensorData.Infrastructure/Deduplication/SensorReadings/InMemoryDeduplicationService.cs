@@ -2,7 +2,7 @@
 using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Services;
 using System.Collections.Concurrent;
 
-namespace DanaTadbir.I4Twins.SensorData.DomainService.SensorReadings
+namespace DanaTadbir.I4Twins.SensorData.Infrastructure.Deduplication.SensorReadings
 {
     // TODO<Mehdi>(replace in-memory deduplication): use Redis for distributed deduplication
     public sealed class InMemoryDeduplicationService : IDeduplicationService

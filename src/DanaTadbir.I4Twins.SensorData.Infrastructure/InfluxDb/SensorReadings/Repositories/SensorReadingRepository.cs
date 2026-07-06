@@ -56,7 +56,7 @@ from(bucket: ""{_options.Bucket}"")
   |> filter(fn: (r) => r[""_measurement""] == ""{InfluxConstants.SensorReading.Measurement}"")
   |> filter(fn: (r) => r[""{InfluxConstants.SensorReading.Tags.DeviceId}""] == ""{EscapeFluxString(deviceId)}"")
   |> filter(fn: (r) => r[""{InfluxConstants.SensorReading.Tags.Metric}""] == ""{EscapeFluxString(metricString)}"")
-  |> pivot(rowKey: [""_time""] columnKey: [""_field""] valueColumn: ""_value"")
+  |> pivot(rowKey: [""_time""], columnKey: [""_field""], valueColumn: ""_value"")
   |> sort(columns: [""_time""], desc: false) 
 ";
 

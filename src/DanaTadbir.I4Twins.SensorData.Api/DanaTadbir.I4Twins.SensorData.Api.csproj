@@ -10,4 +10,17 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\DanaTadbir.I4Twins.SensorData.Shared\DanaTadbir.I4Twins.SensorData.Shared.csproj" />
+    <ProjectReference Include="..\DanaTadbir.I4Twins.SensorData.Application\DanaTadbir.I4Twins.SensorData.Application.csproj" />
+    <ProjectReference Include="..\DanaTadbir.I4Twins.SensorData.DomainService\DanaTadbir.I4Twins.SensorData.DomainService.csproj" />
+    <ProjectReference Include="..\DanaTadbir.I4Twins.SensorData.Infrastructure\DanaTadbir.I4Twins.SensorData.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="readings.jsonl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
