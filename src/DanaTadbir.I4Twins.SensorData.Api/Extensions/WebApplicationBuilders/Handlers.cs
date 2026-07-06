@@ -1,6 +1,6 @@
-﻿using DanaTadbir.I4Twins.SensorData.Application.SensorReadings.Dtos;
-using DanaTadbir.I4Twins.SensorData.Application.SensorReadings.Handlers;
+﻿using DanaTadbir.I4Twins.SensorData.Application.SensorReadings.Handlers;
 using DanaTadbir.I4Twins.SensorData.Application.SensorReadings.Requests;
+using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Dtos;
 using DanaTadbir.I4Twins.SensorData.Shared.Application.Mediator;
 
 namespace DanaTadbir.I4Twins.SensorData.Api.Extensions.WebApplicationBuilders
@@ -12,7 +12,7 @@ namespace DanaTadbir.I4Twins.SensorData.Api.Extensions.WebApplicationBuilders
             builder.Services.AddScoped<IMediator, Mediator>();
 
             #region [- SensorReadings -]
-            builder.Services.AddTransient<IRequestHandler<GetSensorReadingsRequest, IReadOnlyList<SensorReadingDto>>, GetSensorReadingsHandler>();
+            builder.Services.AddTransient<IRequestHandler<GetAggregatedReadingsRequest, IReadOnlyList<SensorReadingBucketDto>>, GetAggregatedReadingsHandler>();
             #endregion
 
             return builder;

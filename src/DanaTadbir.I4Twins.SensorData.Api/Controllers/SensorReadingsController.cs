@@ -1,5 +1,5 @@
-﻿using DanaTadbir.I4Twins.SensorData.Application.SensorReadings.Dtos;
-using DanaTadbir.I4Twins.SensorData.Application.SensorReadings.Requests;
+﻿using DanaTadbir.I4Twins.SensorData.Application.SensorReadings.Requests;
+using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Dtos;
 using DanaTadbir.I4Twins.SensorData.Shared.Application.Mediator;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,11 +17,11 @@ namespace DanaTadbir.I4Twins.SensorData.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<SensorReadingDto>>> GetAsync(
-            [FromQuery] GetSensorReadingsRequest request,
+        public async Task<ActionResult<IReadOnlyList<SensorReadingBucketDto>>> GetAsync(
+            [FromQuery] GetAggregatedReadingsRequest request,
             CancellationToken cancellationToken)
         {
-            var result = await _mediator.SendAsync<GetSensorReadingsRequest, IReadOnlyList<SensorReadingDto>>(
+            var result = await _mediator.SendAsync<GetAggregatedReadingsRequest, IReadOnlyList<SensorReadingBucketDto>>(
                 request,
                 cancellationToken);
 

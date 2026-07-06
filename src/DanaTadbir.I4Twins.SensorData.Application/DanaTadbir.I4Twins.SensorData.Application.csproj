@@ -10,4 +10,8 @@
     <ProjectReference Include="..\DanaTadbir.I4Twins.SensorData.Domain\DanaTadbir.I4Twins.SensorData.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SensorReadings\Dtos\" />
+  </ItemGroup>
+
 </Project>

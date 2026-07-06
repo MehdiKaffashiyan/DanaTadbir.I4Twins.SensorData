@@ -1,4 +1,5 @@
-﻿using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Entities;
+﻿using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Dtos;
+using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Entities;
 using DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Enums;
 
 namespace DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Database
@@ -8,11 +9,12 @@ namespace DanaTadbir.I4Twins.SensorData.Domain.SensorReadings.Database
         Task AddAsync(SensorReading reading, CancellationToken ct = default);
         Task AddBatchAsync(IEnumerable<SensorReading> readings, CancellationToken ct = default);
 
-        Task<IEnumerable<SensorReading>> GetReadingsAsync(
+        Task<IReadOnlyList<SensorReadingBucketDto>> GetAggregatedReadingsAsync(
             string deviceId,
             MetricType metric,
             DateTimeOffset from,
             DateTimeOffset to,
+            int bucketSizeSeconds,
             CancellationToken ct = default);
     }
 }
