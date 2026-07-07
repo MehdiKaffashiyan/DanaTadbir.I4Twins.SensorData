@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/1.Core/">
+    <Project Path="D:/Git/DanaTadbir.I4Twins.SensorData/src/DanaTadbir.I4Twins.SensorData.Domain/DanaTadbir.I4Twins.SensorData.Domain.csproj" />
+    <Project Path="src/DanaTadbir.I4Twins.SensorData.Application/DanaTadbir.I4Twins.SensorData.Application.csproj" Id="ff6f924a-e6cc-436f-ba10-540ef28a356d" />
+    <Project Path="src/DanaTadbir.I4Twins.SensorData.DomainService/DanaTadbir.I4Twins.SensorData.DomainService.csproj" Id="0e8fc1d4-e47b-4dc0-8bec-f1c50562d9d7" />
+  </Folder>
+  <Folder Name="/src/2.Infrastructure/">
+    <Project Path="src/DanaTadbir.I4Twins.SensorData.Infrastructure/DanaTadbir.I4Twins.SensorData.Infrastructure.csproj" Id="a878612b-7679-459b-9d83-9be861e63a9b" />
+  </Folder>
+  <Folder Name="/src/3.Presentation/">
+    <Project Path="src/DanaTadbir.I4Twins.SensorData.Api/DanaTadbir.I4Twins.SensorData.Api.csproj" Id="91644ca3-d3d4-44e7-a1cd-d7b278899545" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DanaTadbir.I4Twins.SensorData.Tests/DanaTadbir.I4Twins.SensorData.Tests.csproj" />
+  </Folder>
+  <Project Path="DanaTadbir.I4Twins.SensorData.Shared/DanaTadbir.I4Twins.SensorData.Shared.csproj" Id="64fadb6d-9843-439f-b746-312a58b83d50" />
+</Solution>
